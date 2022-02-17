@@ -46,6 +46,10 @@ public class Boleto extends javax.swing.JDialog {
         jLabel15 = new javax.swing.JLabel();
         jLabel16 = new javax.swing.JLabel();
         jLabel17 = new javax.swing.JLabel();
+        jLabel18 = new javax.swing.JLabel();
+        jLabel19 = new javax.swing.JLabel();
+        jLabel20 = new javax.swing.JLabel();
+        jLabel21 = new javax.swing.JLabel();
         jButton42 = new javax.swing.JButton();
         jButton43 = new javax.swing.JButton();
 
@@ -114,6 +118,20 @@ public class Boleto extends javax.swing.JDialog {
         jLabel17.setFont(new java.awt.Font("Verdana", 1, 11)); // NOI18N
         jLabel17.setText("Coop. Alex");
 
+        jLabel18.setFont(new java.awt.Font("Verdana", 1, 11)); // NOI18N
+        jLabel18.setForeground(new java.awt.Color(51, 153, 255));
+        jLabel18.setText("Asiento");
+
+        jLabel19.setFont(new java.awt.Font("Verdana", 1, 11)); // NOI18N
+        jLabel19.setText("1");
+
+        jLabel20.setFont(new java.awt.Font("Verdana", 1, 11)); // NOI18N
+        jLabel20.setForeground(new java.awt.Color(51, 153, 255));
+        jLabel20.setText("Asiento");
+
+        jLabel21.setFont(new java.awt.Font("Verdana", 1, 11)); // NOI18N
+        jLabel21.setText("1");
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -125,14 +143,16 @@ public class Boleto extends javax.swing.JDialog {
                         .addComponent(jLabel11)
                         .addGap(50, 50, 50))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGap(49, 49, 49)
                                 .addComponent(jLabel13)
                                 .addGap(64, 64, 64)
                                 .addComponent(jLabel15))
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(122, 122, 122)
+                                .addGap(23, 23, 23)
+                                .addComponent(jLabel20)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(jLabel16)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 74, Short.MAX_VALUE)))
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -164,8 +184,14 @@ public class Boleto extends javax.swing.JDialog {
                         .addGap(87, 87, 87)
                         .addComponent(jLabel14))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(135, 135, 135)
-                        .addComponent(jLabel17)))
+                        .addGap(44, 44, 44)
+                        .addComponent(jLabel21)
+                        .addGap(141, 141, 141)
+                        .addComponent(jLabel17)
+                        .addGap(88, 88, 88)
+                        .addComponent(jLabel18)
+                        .addGap(18, 18, 18)
+                        .addComponent(jLabel19)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -190,20 +216,30 @@ public class Boleto extends javax.swing.JDialog {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel12)
                     .addComponent(jLabel14))
-                .addGap(8, 8, 8)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel5)
-                    .addComponent(jLabel9)
-                    .addComponent(jLabel13)
-                    .addComponent(jLabel15))
-                .addGap(33, 33, 33)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel10)
-                    .addComponent(jLabel6)
-                    .addComponent(jLabel16))
-                .addGap(18, 18, 18)
-                .addComponent(jLabel17)
-                .addContainerGap(24, Short.MAX_VALUE))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(8, 8, 8)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel5)
+                            .addComponent(jLabel9)
+                            .addComponent(jLabel13)
+                            .addComponent(jLabel15))
+                        .addGap(33, 33, 33)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel10)
+                            .addComponent(jLabel6)
+                            .addComponent(jLabel16)
+                            .addComponent(jLabel20))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel17)
+                            .addComponent(jLabel18)
+                            .addComponent(jLabel19))
+                        .addContainerGap(24, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jLabel21)
+                        .addGap(34, 34, 34))))
         );
 
         jButton42.setBackground(new java.awt.Color(255, 255, 255));
@@ -306,7 +342,11 @@ public class Boleto extends javax.swing.JDialog {
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel20;
+    private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
