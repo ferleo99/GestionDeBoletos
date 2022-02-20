@@ -3,18 +3,18 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Visual;
+package Visual.Administrador;
 
 /**
  *
  * @author 59397
  */
-public class FrmAñadirUsuario extends javax.swing.JFrame {
+public class FrmActualizarUsuario extends javax.swing.JFrame {
 
     /**
      * Creates new form FrmAñadirCooperativa
      */
-    public FrmAñadirUsuario() {
+    public FrmActualizarUsuario() {
         initComponents();
 
     }
@@ -36,28 +36,28 @@ public class FrmAñadirUsuario extends javax.swing.JFrame {
         btnCancelar = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
-        txtlugarDestino = new javax.swing.JTextField();
+        txtCedulaAU = new javax.swing.JTextField();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
-        txtlugarDestino1 = new javax.swing.JTextField();
-        txtlugarDestino2 = new javax.swing.JTextField();
-        txtlugarDestino6 = new javax.swing.JTextField();
-        txtlugarDestino7 = new javax.swing.JTextField();
-        txtlugarDestino8 = new javax.swing.JTextField();
-        txtlugarDestino4 = new javax.swing.JTextField();
-        txtlugarDestino5 = new javax.swing.JTextField();
+        txtNombreActuallizarUsuario = new javax.swing.JTextField();
+        txtApellidoAU = new javax.swing.JTextField();
+        txtContraseñaAU = new javax.swing.JTextField();
+        txtDirecciónAU = new javax.swing.JTextField();
+        txtUsuarioAU = new javax.swing.JTextField();
+        txtTelefono = new javax.swing.JTextField();
+        txtEmailAu = new javax.swing.JTextField();
         jLabel12 = new javax.swing.JLabel();
-        cmbTipoUsuario = new javax.swing.JComboBox<>();
-        dtcFechaNacimiento = new com.toedter.calendar.JDateChooser();
+        cmbTipoUsuarioAU = new javax.swing.JComboBox<>();
+        jCalendarFechaNac = new com.toedter.calendar.JDateChooser();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Añadir Usuario");
+        setTitle("Actualizar Usuario");
 
         jLabel1.setFont(new java.awt.Font("Verdana", 1, 18)); // NOI18N
-        jLabel1.setText("Añadir Usuario");
+        jLabel1.setText("Actualizar Usuario");
 
         jLabel2.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
         jLabel2.setText("Nombre:");
@@ -82,12 +82,8 @@ public class FrmAñadirUsuario extends javax.swing.JFrame {
         jLabel6.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
         jLabel6.setText("Email:");
 
-        txtlugarDestino.setFont(new java.awt.Font("Verdana", 0, 14)); // NOI18N
-        txtlugarDestino.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtlugarDestinoActionPerformed(evt);
-            }
-        });
+        txtCedulaAU.setEditable(false);
+        txtCedulaAU.setFont(new java.awt.Font("Verdana", 0, 14)); // NOI18N
 
         jLabel7.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
         jLabel7.setText("Fecha de ");
@@ -104,59 +100,24 @@ public class FrmAñadirUsuario extends javax.swing.JFrame {
         jLabel11.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
         jLabel11.setText("Contraseña:");
 
-        txtlugarDestino1.setFont(new java.awt.Font("Verdana", 0, 14)); // NOI18N
-        txtlugarDestino1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtlugarDestino1ActionPerformed(evt);
-            }
-        });
+        txtNombreActuallizarUsuario.setFont(new java.awt.Font("Verdana", 0, 14)); // NOI18N
 
-        txtlugarDestino2.setFont(new java.awt.Font("Verdana", 0, 14)); // NOI18N
-        txtlugarDestino2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtlugarDestino2ActionPerformed(evt);
-            }
-        });
+        txtApellidoAU.setFont(new java.awt.Font("Verdana", 0, 14)); // NOI18N
 
-        txtlugarDestino6.setFont(new java.awt.Font("Verdana", 0, 14)); // NOI18N
-        txtlugarDestino6.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtlugarDestino6ActionPerformed(evt);
-            }
-        });
+        txtContraseñaAU.setFont(new java.awt.Font("Verdana", 0, 14)); // NOI18N
 
-        txtlugarDestino7.setFont(new java.awt.Font("Verdana", 0, 14)); // NOI18N
-        txtlugarDestino7.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtlugarDestino7ActionPerformed(evt);
-            }
-        });
+        txtDirecciónAU.setFont(new java.awt.Font("Verdana", 0, 14)); // NOI18N
 
-        txtlugarDestino8.setFont(new java.awt.Font("Verdana", 0, 14)); // NOI18N
-        txtlugarDestino8.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtlugarDestino8ActionPerformed(evt);
-            }
-        });
+        txtUsuarioAU.setFont(new java.awt.Font("Verdana", 0, 14)); // NOI18N
 
-        txtlugarDestino4.setFont(new java.awt.Font("Verdana", 0, 14)); // NOI18N
-        txtlugarDestino4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtlugarDestino4ActionPerformed(evt);
-            }
-        });
+        txtTelefono.setFont(new java.awt.Font("Verdana", 0, 14)); // NOI18N
 
-        txtlugarDestino5.setFont(new java.awt.Font("Verdana", 0, 14)); // NOI18N
-        txtlugarDestino5.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtlugarDestino5ActionPerformed(evt);
-            }
-        });
+        txtEmailAu.setFont(new java.awt.Font("Verdana", 0, 14)); // NOI18N
 
         jLabel12.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
         jLabel12.setText("Tipo Usuario:");
 
-        cmbTipoUsuario.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Vendedor", "Administrador", " " }));
+        cmbTipoUsuarioAU.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Vendedor", "Administrador", " " }));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -168,23 +129,12 @@ public class FrmAñadirUsuario extends javax.swing.JFrame {
                         .addGap(37, 37, 37)
                         .addComponent(jLabel2)
                         .addGap(84, 84, 84)
-                        .addComponent(txtlugarDestino1, javax.swing.GroupLayout.PREFERRED_SIZE, 204, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(txtNombreActuallizarUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 204, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(37, 37, 37)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel7)
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addGroup(layout.createSequentialGroup()
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(jLabel5)
-                                        .addComponent(jLabel10)
-                                        .addComponent(jLabel11)
-                                        .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGap(18, 18, 18)
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                        .addComponent(txtlugarDestino7)
-                                        .addComponent(txtlugarDestino8)
-                                        .addComponent(txtlugarDestino6)
-                                        .addComponent(cmbTipoUsuario, 0, 204, Short.MAX_VALUE)))
                                 .addGroup(layout.createSequentialGroup()
                                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                         .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -193,23 +143,38 @@ public class FrmAñadirUsuario extends javax.swing.JFrame {
                                         .addComponent(jLabel9))
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                        .addComponent(txtlugarDestino2, javax.swing.GroupLayout.PREFERRED_SIZE, 204, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(txtlugarDestino, javax.swing.GroupLayout.PREFERRED_SIZE, 204, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(txtApellidoAU, javax.swing.GroupLayout.PREFERRED_SIZE, 204, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(txtCedulaAU, javax.swing.GroupLayout.PREFERRED_SIZE, 204, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGroup(layout.createSequentialGroup()
                                             .addGap(1, 1, 1)
                                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                                .addComponent(txtlugarDestino5, javax.swing.GroupLayout.DEFAULT_SIZE, 204, Short.MAX_VALUE)
-                                                .addComponent(txtlugarDestino4, javax.swing.GroupLayout.DEFAULT_SIZE, 204, Short.MAX_VALUE)
-                                                .addComponent(dtcFechaNacimiento, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))))
-                            .addComponent(jLabel7)
-                            .addComponent(jLabel8)))
+                                                .addComponent(txtEmailAu, javax.swing.GroupLayout.DEFAULT_SIZE, 204, Short.MAX_VALUE)
+                                                .addComponent(txtTelefono, javax.swing.GroupLayout.DEFAULT_SIZE, 204, Short.MAX_VALUE)))))
+                                .addGroup(layout.createSequentialGroup()
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                .addComponent(jLabel5)
+                                                .addComponent(jLabel10)
+                                                .addComponent(jLabel11)
+                                                .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addGap(18, 18, 18))
+                                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                            .addComponent(jLabel8)
+                                            .addGap(62, 62, 62)))
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addComponent(txtDirecciónAU)
+                                        .addComponent(txtUsuarioAU)
+                                        .addComponent(txtContraseñaAU)
+                                        .addComponent(cmbTipoUsuarioAU, 0, 204, Short.MAX_VALUE)
+                                        .addComponent(jCalendarFechaNac, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(109, 109, 109)
                         .addComponent(btnCancelar)
                         .addGap(41, 41, 41)
                         .addComponent(btnGuardar))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(163, 163, 163)
+                        .addGap(138, 138, 138)
                         .addComponent(jLabel1)))
                 .addContainerGap(83, Short.MAX_VALUE))
         );
@@ -223,17 +188,17 @@ public class FrmAñadirUsuario extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(3, 3, 3)
                         .addComponent(jLabel2))
-                    .addComponent(txtlugarDestino1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtNombreActuallizarUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(7, 7, 7)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
-                    .addComponent(txtlugarDestino2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtApellidoAU, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(10, 10, 10)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(3, 3, 3)
                         .addComponent(jLabel4))
-                    .addComponent(txtlugarDestino, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtCedulaAU, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(7, 7, 7)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
@@ -241,15 +206,15 @@ public class FrmAñadirUsuario extends javax.swing.JFrame {
                         .addGap(13, 13, 13)
                         .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(13, 13, 13)
-                        .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(7, 7, 7)
-                        .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(txtlugarDestino5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(txtEmailAu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(7, 7, 7)
-                        .addComponent(txtlugarDestino4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(dtcFechaNacimiento, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(txtTelefono, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(7, 7, 7)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jCalendarFechaNac, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(layout.createSequentialGroup()
@@ -259,15 +224,15 @@ public class FrmAñadirUsuario extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(txtlugarDestino7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(txtDirecciónAU, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(6, 6, 6)
-                        .addComponent(txtlugarDestino8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(txtUsuarioAU, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(6, 6, 6)
-                        .addComponent(txtlugarDestino6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(txtContraseñaAU, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(cmbTipoUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(cmbTipoUsuarioAU, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(36, 36, 36)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnCancelar)
@@ -277,38 +242,6 @@ public class FrmAñadirUsuario extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void txtlugarDestinoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtlugarDestinoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtlugarDestinoActionPerformed
-
-    private void txtlugarDestino1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtlugarDestino1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtlugarDestino1ActionPerformed
-
-    private void txtlugarDestino2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtlugarDestino2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtlugarDestino2ActionPerformed
-
-    private void txtlugarDestino6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtlugarDestino6ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtlugarDestino6ActionPerformed
-
-    private void txtlugarDestino7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtlugarDestino7ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtlugarDestino7ActionPerformed
-
-    private void txtlugarDestino8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtlugarDestino8ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtlugarDestino8ActionPerformed
-
-    private void txtlugarDestino4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtlugarDestino4ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtlugarDestino4ActionPerformed
-
-    private void txtlugarDestino5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtlugarDestino5ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtlugarDestino5ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -327,14 +260,38 @@ public class FrmAñadirUsuario extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(FrmAñadirUsuario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FrmActualizarUsuario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(FrmAñadirUsuario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FrmActualizarUsuario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(FrmAñadirUsuario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FrmActualizarUsuario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(FrmAñadirUsuario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FrmActualizarUsuario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>
@@ -350,7 +307,7 @@ public class FrmAñadirUsuario extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new FrmAñadirUsuario().setVisible(true);
+                new FrmActualizarUsuario().setVisible(true);
             }
         });
     }
@@ -358,8 +315,8 @@ public class FrmAñadirUsuario extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnCancelar;
     private javax.swing.JButton btnGuardar;
-    private javax.swing.JComboBox<String> cmbTipoUsuario;
-    private com.toedter.calendar.JDateChooser dtcFechaNacimiento;
+    private javax.swing.JComboBox<String> cmbTipoUsuarioAU;
+    private com.toedter.calendar.JDateChooser jCalendarFechaNac;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -372,13 +329,13 @@ public class FrmAñadirUsuario extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JTextField txtlugarDestino;
-    private javax.swing.JTextField txtlugarDestino1;
-    private javax.swing.JTextField txtlugarDestino2;
-    private javax.swing.JTextField txtlugarDestino4;
-    private javax.swing.JTextField txtlugarDestino5;
-    private javax.swing.JTextField txtlugarDestino6;
-    private javax.swing.JTextField txtlugarDestino7;
-    private javax.swing.JTextField txtlugarDestino8;
+    private javax.swing.JTextField txtApellidoAU;
+    private javax.swing.JTextField txtCedulaAU;
+    private javax.swing.JTextField txtContraseñaAU;
+    private javax.swing.JTextField txtDirecciónAU;
+    private javax.swing.JTextField txtEmailAu;
+    private javax.swing.JTextField txtNombreActuallizarUsuario;
+    private javax.swing.JTextField txtTelefono;
+    private javax.swing.JTextField txtUsuarioAU;
     // End of variables declaration//GEN-END:variables
 }

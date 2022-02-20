@@ -3,18 +3,18 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Visual;
+package Visual.Administrador;
 
 /**
  *
  * @author 59397
  */
-public class FrmActualizarUsuario extends javax.swing.JFrame {
+public class FrmAñadirUsuario extends javax.swing.JFrame {
 
     /**
      * Creates new form FrmAñadirCooperativa
      */
-    public FrmActualizarUsuario() {
+    public FrmAñadirUsuario() {
         initComponents();
 
     }
@@ -54,10 +54,10 @@ public class FrmActualizarUsuario extends javax.swing.JFrame {
         dtcFechaNacimiento = new com.toedter.calendar.JDateChooser();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Actualizar Usuario");
+        setTitle("Añadir Usuario");
 
         jLabel1.setFont(new java.awt.Font("Verdana", 1, 18)); // NOI18N
-        jLabel1.setText("Actualizar Usuario");
+        jLabel1.setText("Añadir Usuario");
 
         jLabel2.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
         jLabel2.setText("Nombre:");
@@ -82,8 +82,12 @@ public class FrmActualizarUsuario extends javax.swing.JFrame {
         jLabel6.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
         jLabel6.setText("Email:");
 
-        txtlugarDestino.setEditable(false);
         txtlugarDestino.setFont(new java.awt.Font("Verdana", 0, 14)); // NOI18N
+        txtlugarDestino.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtlugarDestinoActionPerformed(evt);
+            }
+        });
 
         jLabel7.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
         jLabel7.setText("Fecha de ");
@@ -101,18 +105,53 @@ public class FrmActualizarUsuario extends javax.swing.JFrame {
         jLabel11.setText("Contraseña:");
 
         txtlugarDestino1.setFont(new java.awt.Font("Verdana", 0, 14)); // NOI18N
+        txtlugarDestino1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtlugarDestino1ActionPerformed(evt);
+            }
+        });
 
         txtlugarDestino2.setFont(new java.awt.Font("Verdana", 0, 14)); // NOI18N
+        txtlugarDestino2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtlugarDestino2ActionPerformed(evt);
+            }
+        });
 
         txtlugarDestino6.setFont(new java.awt.Font("Verdana", 0, 14)); // NOI18N
+        txtlugarDestino6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtlugarDestino6ActionPerformed(evt);
+            }
+        });
 
         txtlugarDestino7.setFont(new java.awt.Font("Verdana", 0, 14)); // NOI18N
+        txtlugarDestino7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtlugarDestino7ActionPerformed(evt);
+            }
+        });
 
         txtlugarDestino8.setFont(new java.awt.Font("Verdana", 0, 14)); // NOI18N
+        txtlugarDestino8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtlugarDestino8ActionPerformed(evt);
+            }
+        });
 
         txtlugarDestino4.setFont(new java.awt.Font("Verdana", 0, 14)); // NOI18N
+        txtlugarDestino4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtlugarDestino4ActionPerformed(evt);
+            }
+        });
 
         txtlugarDestino5.setFont(new java.awt.Font("Verdana", 0, 14)); // NOI18N
+        txtlugarDestino5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtlugarDestino5ActionPerformed(evt);
+            }
+        });
 
         jLabel12.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
         jLabel12.setText("Tipo Usuario:");
@@ -133,8 +172,6 @@ public class FrmActualizarUsuario extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(37, 37, 37)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel7)
-                            .addComponent(jLabel8)
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                 .addGroup(layout.createSequentialGroup()
                                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -161,16 +198,18 @@ public class FrmActualizarUsuario extends javax.swing.JFrame {
                                         .addGroup(layout.createSequentialGroup()
                                             .addGap(1, 1, 1)
                                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                                .addComponent(dtcFechaNacimiento, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                                 .addComponent(txtlugarDestino5, javax.swing.GroupLayout.DEFAULT_SIZE, 204, Short.MAX_VALUE)
-                                                .addComponent(txtlugarDestino4, javax.swing.GroupLayout.DEFAULT_SIZE, 204, Short.MAX_VALUE))))))))
+                                                .addComponent(txtlugarDestino4, javax.swing.GroupLayout.DEFAULT_SIZE, 204, Short.MAX_VALUE)
+                                                .addComponent(dtcFechaNacimiento, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))))
+                            .addComponent(jLabel7)
+                            .addComponent(jLabel8)))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(109, 109, 109)
                         .addComponent(btnCancelar)
                         .addGap(41, 41, 41)
                         .addComponent(btnGuardar))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(138, 138, 138)
+                        .addGap(163, 163, 163)
                         .addComponent(jLabel1)))
                 .addContainerGap(83, Short.MAX_VALUE))
         );
@@ -209,7 +248,7 @@ public class FrmActualizarUsuario extends javax.swing.JFrame {
                         .addComponent(txtlugarDestino5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(7, 7, 7)
                         .addComponent(txtlugarDestino4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(26, 26, 26)
+                        .addGap(18, 18, 18)
                         .addComponent(dtcFechaNacimiento, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -239,6 +278,38 @@ public class FrmActualizarUsuario extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void txtlugarDestinoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtlugarDestinoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtlugarDestinoActionPerformed
+
+    private void txtlugarDestino1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtlugarDestino1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtlugarDestino1ActionPerformed
+
+    private void txtlugarDestino2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtlugarDestino2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtlugarDestino2ActionPerformed
+
+    private void txtlugarDestino6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtlugarDestino6ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtlugarDestino6ActionPerformed
+
+    private void txtlugarDestino7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtlugarDestino7ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtlugarDestino7ActionPerformed
+
+    private void txtlugarDestino8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtlugarDestino8ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtlugarDestino8ActionPerformed
+
+    private void txtlugarDestino4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtlugarDestino4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtlugarDestino4ActionPerformed
+
+    private void txtlugarDestino5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtlugarDestino5ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtlugarDestino5ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -256,38 +327,14 @@ public class FrmActualizarUsuario extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(FrmActualizarUsuario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FrmAñadirUsuario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(FrmActualizarUsuario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FrmAñadirUsuario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(FrmActualizarUsuario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FrmAñadirUsuario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(FrmActualizarUsuario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FrmAñadirUsuario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>
@@ -303,7 +350,7 @@ public class FrmActualizarUsuario extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new FrmActualizarUsuario().setVisible(true);
+                new FrmAñadirUsuario().setVisible(true);
             }
         });
     }
