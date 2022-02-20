@@ -3,8 +3,16 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Visual;
+package Visual.Administrador;
 
+import Control.Administrador.BusesManager;
+import Control.Administrador.CooperativasManager;
+import Control.SingleCallBack;
+import Model.Usuarios.Administrador.Modulos.AdminBuses;
+import Model.Usuarios.Administrador.Modulos.AdminCooperativas;
+
+import javax.swing.*;
+import javax.swing.table.DefaultTableModel;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -12,19 +20,20 @@ import java.util.Date;
  *
  * @author 59397
  */
-public class FrmCooperativas extends javax.swing.JFrame {
+public class FrmBuses extends javax.swing.JFrame {
     Date fecha = new Date();
 
     /**
      * Creates new form UsuariosNRT
      */
-    public FrmCooperativas() {
+    public FrmBuses() {
         
         initComponents();
         SimpleDateFormat fechasistema = new SimpleDateFormat("dd - MM - yyyy");
         lblFechaSistema.setText(fechasistema.format(fecha));
         SimpleDateFormat horasistema = new SimpleDateFormat("HH:mm");
         lblHora.setText(horasistema.format(fecha));
+        insertDataInTable();
     }
 
     /**
@@ -40,7 +49,7 @@ public class FrmCooperativas extends javax.swing.JFrame {
         jTable1 = new javax.swing.JTable();
         jPanel5 = new javax.swing.JPanel();
         jScrollPane2 = new javax.swing.JScrollPane();
-        tblCooperativas = new javax.swing.JTable();
+        tblBuses = new javax.swing.JTable();
         btnAñadir = new javax.swing.JButton();
         btnActualizar = new javax.swing.JButton();
         btnEliminar = new javax.swing.JButton();
@@ -77,19 +86,24 @@ public class FrmCooperativas extends javax.swing.JFrame {
         jPanel5.setBackground(new java.awt.Color(255, 255, 255));
         jPanel5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
 
-        tblCooperativas.setFont(new java.awt.Font("Verdana", 0, 13)); // NOI18N
-        tblCooperativas.setModel(new javax.swing.table.DefaultTableModel(
+        tblBuses.setFont(new java.awt.Font("Verdana", 0, 13)); // NOI18N
+        tblBuses.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null}
+                {null, null, null, null}
             },
             new String [] {
-                "Title 1", "Title 2", "Title 3"
+                "Codigo", "Placa", "Num. Asientos", "Cooperativa"
             }
-        ));
-        jScrollPane2.setViewportView(tblCooperativas);
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        jScrollPane2.setViewportView(tblBuses);
 
         btnAñadir.setBackground(java.awt.SystemColor.activeCaption);
         btnAñadir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Visual/img/anadiricon.png"))); // NOI18N
@@ -97,6 +111,11 @@ public class FrmCooperativas extends javax.swing.JFrame {
         btnAñadir.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 btnAñadirMouseClicked(evt);
+            }
+        });
+        btnAñadir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAñadirActionPerformed(evt);
             }
         });
 
@@ -110,6 +129,11 @@ public class FrmCooperativas extends javax.swing.JFrame {
 
         btnEliminar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Visual/img/eliminaricon.png"))); // NOI18N
         btnEliminar.setText("    Eliminar");
+        btnEliminar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnEliminarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
@@ -225,14 +249,14 @@ public class FrmCooperativas extends javax.swing.JFrame {
         );
 
         jLabel35.setFont(new java.awt.Font("Verdana", 1, 20)); // NOI18N
-        jLabel35.setText("Cooperativas");
+        jLabel35.setText("Buses");
 
         lblInicio.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
         lblInicio.setForeground(new java.awt.Color(3, 145, 181));
         lblInicio.setText("Inicio");
 
         lblBuses.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
-        lblBuses.setText(" > Cooperativas");
+        lblBuses.setText(" > Buses");
 
         lblFechaSistema.setFont(new java.awt.Font("Verdana", 1, 11)); // NOI18N
         lblFechaSistema.setText("Maters 20, de Juilio del 2021");
@@ -301,15 +325,56 @@ public class FrmCooperativas extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnAñadirMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAñadirMouseClicked
-        FrmAñadirCooperativa frmañadircooperativa= new FrmAñadirCooperativa();
-        frmañadircooperativa.setVisible(true);
-                
+        FrmAñadirBusAfiliado frmAñadirBusAfiliado = new FrmAñadirBusAfiliado();
+        frmAñadirBusAfiliado.setVisible(true);
+        
     }//GEN-LAST:event_btnAñadirMouseClicked
 
     private void btnActualizarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnActualizarMouseClicked
-        FrmActualizarCooperativa frmActualizarCooperativa = new FrmActualizarCooperativa();
-        frmActualizarCooperativa.setVisible(true);
+        FrmActualizarBusAfiliado frmActualizarBusAfiliado= new FrmActualizarBusAfiliado();
+        frmActualizarBusAfiliado.setVisible(true);
     }//GEN-LAST:event_btnActualizarMouseClicked
+
+    private void btnAñadirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAñadirActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnAñadirActionPerformed
+
+    private void btnEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarActionPerformed
+        // TODO add your handling code here:
+        int selectRow = tblBuses.getSelectedRow();
+        if(selectRow >= 0){
+            int codigo = (int) tblBuses.getModel().getValueAt(selectRow,0);
+            BusesManager.getInstance().deleteBus(codigo, new SingleCallBack() {
+                @Override
+                public void onSucces() {
+                    tblBuses.remove(selectRow);
+                    JOptionPane.showMessageDialog(null, "¡Se eliminó correctamente!");
+                }
+
+                @Override
+                public void onFailed() {
+                    JOptionPane.showMessageDialog(null, "¡Ha ocurrido un error al eliminar los datos!");
+                }
+            });
+            return;
+        }
+        JOptionPane.showMessageDialog(null, "Selecciona un bus!");
+    }//GEN-LAST:event_btnEliminarActionPerformed
+
+    public void insertDataInTable() {
+        DefaultTableModel modelo = (DefaultTableModel) tblBuses.getModel();
+        if (modelo != null) {
+            for (AdminBuses item : BusesManager.getInstance().getListBuses()) {
+                Object[] fila = new Object[4];
+                fila[0] = item.getId();
+                fila[1] = item.getPlacaBus();
+                fila[2] = item.getNumeroAsientos();
+                fila[3] = item.getIdCooperativa();
+                modelo.addRow(fila);
+                tblBuses.setModel(modelo);
+            }
+        }
+    }
 
     /**
      * @param args the command line arguments
@@ -328,18 +393,14 @@ public class FrmCooperativas extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(FrmCooperativas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FrmBuses.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(FrmCooperativas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FrmBuses.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(FrmCooperativas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FrmBuses.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(FrmCooperativas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FrmBuses.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>
@@ -348,7 +409,7 @@ public class FrmCooperativas extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new FrmCooperativas().setVisible(true);
+                new FrmBuses().setVisible(true);
             }
         });
     }
@@ -375,6 +436,6 @@ public class FrmCooperativas extends javax.swing.JFrame {
     private javax.swing.JLabel lblFechaSistema;
     private javax.swing.JLabel lblHora;
     private javax.swing.JLabel lblInicio;
-    private javax.swing.JTable tblCooperativas;
+    private javax.swing.JTable tblBuses;
     // End of variables declaration//GEN-END:variables
 }

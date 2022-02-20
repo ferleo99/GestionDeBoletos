@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Visual;
+package Visual.Administrador;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -12,13 +12,13 @@ import java.util.Date;
  *
  * @author 59397
  */
-public class FrmUsuarios extends javax.swing.JFrame {
+public class FrmViajes extends javax.swing.JFrame {
     Date fecha = new Date();
 
     /**
      * Creates new form UsuariosNRT
      */
-    public FrmUsuarios() {
+    public FrmViajes() {
         
         initComponents();
         SimpleDateFormat fechasistema = new SimpleDateFormat("dd - MM - yyyy");
@@ -40,7 +40,7 @@ public class FrmUsuarios extends javax.swing.JFrame {
         jTable1 = new javax.swing.JTable();
         jPanel5 = new javax.swing.JPanel();
         jScrollPane2 = new javax.swing.JScrollPane();
-        tblUsuarios = new javax.swing.JTable();
+        tblViajes = new javax.swing.JTable();
         btnAñadir = new javax.swing.JButton();
         btnActualizar = new javax.swing.JButton();
         btnEliminar = new javax.swing.JButton();
@@ -54,7 +54,7 @@ public class FrmUsuarios extends javax.swing.JFrame {
         btnReportes = new javax.swing.JButton();
         jLabel35 = new javax.swing.JLabel();
         lblInicio = new javax.swing.JLabel();
-        lblUsuarios = new javax.swing.JLabel();
+        lblViajes = new javax.swing.JLabel();
         lblFechaSistema = new javax.swing.JLabel();
         lblHora = new javax.swing.JLabel();
         btnRegresar = new javax.swing.JButton();
@@ -77,19 +77,19 @@ public class FrmUsuarios extends javax.swing.JFrame {
         jPanel5.setBackground(new java.awt.Color(255, 255, 255));
         jPanel5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
 
-        tblUsuarios.setFont(new java.awt.Font("Verdana", 0, 13)); // NOI18N
-        tblUsuarios.setModel(new javax.swing.table.DefaultTableModel(
+        tblViajes.setFont(new java.awt.Font("Verdana", 0, 13)); // NOI18N
+        tblViajes.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null}
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null}
             },
             new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4", "Title 5", "Title 6"
+                "Title 1", "Title 2", "Title 3", "Title 4", "Title 5"
             }
         ));
-        jScrollPane2.setViewportView(tblUsuarios);
+        jScrollPane2.setViewportView(tblViajes);
 
         btnAñadir.setBackground(java.awt.SystemColor.activeCaption);
         btnAñadir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Visual/img/anadiricon.png"))); // NOI18N
@@ -225,17 +225,17 @@ public class FrmUsuarios extends javax.swing.JFrame {
         );
 
         jLabel35.setFont(new java.awt.Font("Verdana", 1, 20)); // NOI18N
-        jLabel35.setText("Usuarios");
+        jLabel35.setText("Viajes");
 
         lblInicio.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
         lblInicio.setForeground(new java.awt.Color(3, 145, 181));
         lblInicio.setText("Inicio");
 
-        lblUsuarios.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
-        lblUsuarios.setText(" > Usuarios");
+        lblViajes.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
+        lblViajes.setText(" > Viajes");
 
         lblFechaSistema.setFont(new java.awt.Font("Verdana", 1, 11)); // NOI18N
-        lblFechaSistema.setText("Maters 20, de Julio del 2021");
+        lblFechaSistema.setText("Maters 20, de Juilio del 2021");
 
         lblHora.setFont(new java.awt.Font("Verdana", 1, 11)); // NOI18N
         lblHora.setText("11:23 AM");
@@ -260,7 +260,7 @@ public class FrmUsuarios extends javax.swing.JFrame {
                                 .addGap(18, 18, 18)
                                 .addComponent(lblInicio)
                                 .addGap(2, 2, 2)
-                                .addComponent(lblUsuarios)
+                                .addComponent(lblViajes)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(btnRegresar))
                             .addGroup(layout.createSequentialGroup()
@@ -290,7 +290,7 @@ public class FrmUsuarios extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(lblInicio)
-                            .addComponent(lblUsuarios)))
+                            .addComponent(lblViajes)))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(btnRegresar)))
@@ -301,13 +301,13 @@ public class FrmUsuarios extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnAñadirMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAñadirMouseClicked
-        FrmAñadirUsuario frmAñadirUsuario= new FrmAñadirUsuario();
-        frmAñadirUsuario.setVisible(true);
+        FrmAñadirViaje frmAñadirViaje= new FrmAñadirViaje();
+        frmAñadirViaje.setVisible(true);
     }//GEN-LAST:event_btnAñadirMouseClicked
 
     private void btnActualizarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnActualizarMouseClicked
-        FrmActualizarUsuario frmActualizarUsuario = new FrmActualizarUsuario();
-        frmActualizarUsuario.setVisible(true);
+        FrmActualizarViaje frmActualizarViaje= new FrmActualizarViaje();
+        frmActualizarViaje.setVisible(true);
     }//GEN-LAST:event_btnActualizarMouseClicked
 
     /**
@@ -327,13 +327,13 @@ public class FrmUsuarios extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(FrmUsuarios.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FrmViajes.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(FrmUsuarios.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FrmViajes.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(FrmUsuarios.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FrmViajes.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(FrmUsuarios.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FrmViajes.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
         //</editor-fold>
@@ -347,7 +347,7 @@ public class FrmUsuarios extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new FrmUsuarios().setVisible(true);
+                new FrmViajes().setVisible(true);
             }
         });
     }
@@ -373,7 +373,7 @@ public class FrmUsuarios extends javax.swing.JFrame {
     private javax.swing.JLabel lblFechaSistema;
     private javax.swing.JLabel lblHora;
     private javax.swing.JLabel lblInicio;
-    private javax.swing.JLabel lblUsuarios;
-    private javax.swing.JTable tblUsuarios;
+    private javax.swing.JLabel lblViajes;
+    private javax.swing.JTable tblViajes;
     // End of variables declaration//GEN-END:variables
 }

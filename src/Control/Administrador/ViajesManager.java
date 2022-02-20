@@ -10,7 +10,7 @@ public class ViajesManager {
     SQLite sqLite = new SQLite();
     public static HashMap<Integer, AdminViajes> viajesHashMap = new HashMap<>();
 
-    public void insertViajesTable() {
+    /*public void insertViajesTable() {
         for (AdminViajes adminViajes : sqLite.getViajes()) {
             if (adminViajes != null) {
                 viajesHashMap.put(adminViajes.getId(), adminViajes);
@@ -25,5 +25,5 @@ public class ViajesManager {
     public void removeViaje(int id) {
         viajesHashMap.remove(id);
         sqLite.deleteViaje(id);
-    }
+    }*/
 }
